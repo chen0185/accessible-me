@@ -8,12 +8,25 @@
   <title>Accessible Me</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Beau+Rivage&family=Bubblegum+Sans&family=Joan&family=Lavishly+Yours&family=Montserrat:wght@100;300&family=Nothing+You+Could+Do&family=Oswald&family=Pacifico&family=Sacramento&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-  <div class="container">
+  <header role="banner">
+    <nav role="navigation"></nav>
+    <div class="container">
+      <ul class="skip-links">
+        <li><a href="#main-nav">Skip to main nav</a></li>
+        <li><a href="#main-content">Skip to main content</a></li>
+      </ul>
+    </div>
+  </header>
+  <main role="main">
+    <article role="article">
+      <h1 role="heading"></h1>
+    </article>
+    <aside role="complementary"></aside>
+    <div class="container">
     <div class="site-header">
       <h1>Jam Box Studios</h1>
       <div class="main-nav">
@@ -24,45 +37,47 @@
           <li><a href="#">Studio</a></li>
         </ul>
       </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
+      <img src="https://placekitten.com/1200/900" class="banner" alt="kitten">
     <div class="main-content">
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
-        </ul>
+    </div>
+    <div class="owner">
+      <h1>Meet the owner</h1>
+        <ul itemscope itemtype="https://schema.org/Person">
+          <li itemprop="name">John Doe</li>  
+          <li itemprop="Title">CEO</li>
+          <li itemprop="email">johnjoe@jambox.ca</li>
+          <li itemprop="phone">613-000-0000</li>
         <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
+          <li itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Jambox Studios 123 Guitar Road, </span>
+          <span itemprop="addressLocality">Musicville, Danceistan </span>
+          <span itemprop="postalCode">B3T 0L0</span>
+        </ul>
+    </div>
+    <div class="contact-section">
+      <h1>Contact Us</h1>
         <form action="thanks.html">
           <label>Full Name</label>
           <input type="text" placeholder="Full Name">
+          <label>Email</label>
           <input type="text" placeholder="Email">
+          <label>Subject</label>
           <input type="text" placeholder="Subject">
           <b>Your Message</b>
           <textarea></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
+    </div> 
     </div>
+  </main>
+  <footer role="contentinfo">
     <div class="site-footer">
       &copy; 2021 Jam Box Studios
-    </div>
-  </div>
+    </div> 
+  </footer>
 </body>
-
 </html>
